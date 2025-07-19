@@ -14,3 +14,8 @@ export async function putRequest(request, endpoint, data = {}) {
 export async function deleteRequest(request, endpoint) {
     return await request.delete(endpoint)
 }
+export async function patchRequest(request, endpoint, data = {}) {
+    return await request.patch(endpoint, {
+        data: JSON.stringify(data)
+    });
+}
